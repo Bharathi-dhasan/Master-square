@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+   int a;scanf("%d",&a);
+   int ar[a][a];
+   int row[a],col[a];
+   for(int i=0;i<a;i++)
+   {   
+       for(int j=0;j<a;j++)
+       {
+           scanf("%d",&ar[i][j]);
+           row[i]+=ar[i][j];
+           col[j]+=ar[i][j];
+       }
+   }
+   int g=0;
+     for(int i=0;i<a;i++) for(int j=0;j<a;j++)  if(col[i]>row[j]) g++;
+     printf("%d",g);
+    return 0;
+}
